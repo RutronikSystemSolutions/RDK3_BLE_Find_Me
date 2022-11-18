@@ -444,9 +444,7 @@ static void ble_start_advertisement(void)
     if((CY_BLE_ADV_STATE_ADVERTISING != Cy_BLE_GetAdvertisementState()) &&
        (Cy_BLE_GetNumOfActiveConn() < CY_BLE_CONN_COUNT))
     {
-        ble_api_result = Cy_BLE_GAPP_StartAdvertisement(
-                            CY_BLE_ADVERTISING_FAST,
-                            CY_BLE_PERIPHERAL_CONFIGURATION_0_INDEX);
+        ble_api_result = Cy_BLE_GAPP_StartAdvertisement(CY_BLE_ADVERTISING_FAST,CY_BLE_PERIPHERAL_CONFIGURATION_0_INDEX);
 
         if(CY_BLE_SUCCESS != ble_api_result)
         {
@@ -522,7 +520,7 @@ static void enter_low_power_mode(void)
 
         /* Wait until UART transfer complete  */
         while(1UL == cyhal_uart_is_tx_active(&cy_retarget_io_uart_obj));
-        cyhal_syspm_hibernate(CYHAL_SYSPM_HIBERNATE_PINB_LOW);
+        cyhal_syspm_hibernate(CYHAL_SYSPM_HIBERNATE_PINA_LOW);
     }
     else
     {
