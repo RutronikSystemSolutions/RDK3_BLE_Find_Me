@@ -4,7 +4,7 @@ Rutronik Development Kit 3 Programmable System-on-Chip CYB06447BZI-BLD53 "RDK3  
 
 This is a typical code example that demonstrates a custom BLE “Find Me” Profile. Please refer to [CE217637 - BLE Find Me Profile with PSoC 6 MCU with BLE Connectivity](https://www.infineon.com/dgdl/Infineon-CE217637_Bluetooth_Low_Energy_Find_Me_Profile_with_PSoC_6_MCU_with_Bluetooth_Low_Energy_Connectivity-Code Example-v02_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0e73c6510607). 
 
- <img src="images/rdk3_top.jpg" style="zoom:35%;" />
+ <img src="images/rdk3_top.jpg" style="zoom:20%;" />
 
 ## Requirements
 
@@ -12,17 +12,13 @@ This is a typical code example that demonstrates a custom BLE “Find Me” Prof
 
 ## The Provisioning of the RDK3
 
-The CYB06447BZI-BLD53 device must be provisioned with keys and policies before being programmed. If the kit is already provisioned, copy-paste the keys and policy folder to the application folder. If the unsigned or not properly signed image will be written to the RDK3 PSoC™ 64 – the microcontroller will not boot. 
+The CYB06447BZI-BLD53 device must be provisioned with **keys** and **policies** before being programmed. If the kit is already provisioned, copy-paste the keys and policy folder to the application folder. If the unsigned or not properly signed image will be written to the RDK3 PSoC™ 64 – the microcontroller will not boot. 
 
 The “[Secure Policy Configurator](https://www.infineon.com/dgdl/Infineon-ModusToolbox_Secure_Policy_Configurator_1.30_User_Guide-UserManual-v01_00-EN.pdf?fileId=8ac78c8c8386267f0183a960762a5977)” tool is used for the provisioning of the new RDK3, please refer to the “ModusToolbox™ Secure Policy Configurator user guide”. 
 
 The CYB06447BZI-BLD53 MCU must be powered from a 2.5V power source to be able to complete the provisioning. The RDK3 has an SMPS [Switching Mode Power Supply] which can be easily adjusted to provide 3.3V or 2.5V to the MCU by switching the slide-switch “SW1” on the bottom side of the board. 
 
-<img src="images/voltage_switch.jpg" style="zoom:50%;" />
-
-Please note that the “[Secure Policy Configurator](https://www.infineon.com/dgdl/Infineon-ModusToolbox_Secure_Policy_Configurator_1.30_User_Guide-UserManual-v01_00-EN.pdf?fileId=8ac78c8c8386267f0183a960762a5977) 1.20” requires the KitProg3 to be set into the CMSIS-DAP mode. Please press the “PROG MODE” button on the RDK3 board's front side once. The DEBUG D5 yellow led will flash indicating the CMSIS-MODE activated.
-
-<img src="images/prog_mode.jpg" style="zoom:75%;" />
+<img src="D:\GitHub\TARGET_RDK3\images\voltage_switch.jpg" style="zoom:50%;" />
 
 ### Using the code example with a ModusToolbox™ IDE:
 
@@ -39,7 +35,7 @@ The yellow LED1 will toggle every time the advertisement event occurs. The MCU i
 - “Alert Level” = “Mild Alert” [0x01] → The LED2 is BLINKING.
 - “Alert Level” = “High Alert” [0x02] → The LED2 is ON.
 
-The Characteristic “Alert Level” is written by the client application using the “Immediate Alert” Service. For example, a “CySmart” application on the Android phone was used to connect to the RDK3 BLE Server “BLE Findme Target”.
+The Characteristic “Alert Level” is written by the client application using the “Immediate Alert” Service. For example, a “AIROC Bluetooth Connect” application on the Android phone was used to connect to the RDK3 BLE Server “BLE Findme Target”.
 
 <img src="images/cysmart.png" style="zoom:40%;" />
 

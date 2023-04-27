@@ -150,9 +150,9 @@
                                         <Field>
                                             <FieldProperties>
                                                 <Property id="Name" value="Manufacturer Name"/>
-                                                <Property id="Value" value="Cypress Semiconductor Corporation"/>
+                                                <Property id="Value" value="Infineon"/>
                                                 <Property id="Format" value="f_utf8s"/>
-                                                <Property id="ByteLength" value="33"/>
+                                                <Property id="ByteLength" value="8"/>
                                             </FieldProperties>
                                         </Field>
                                     </Fields>
